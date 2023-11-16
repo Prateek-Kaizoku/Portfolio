@@ -12,7 +12,7 @@ const Projects = () => {
       (entries) => {
         const visibleIds = entries
           .filter((entry) => entry.isIntersecting)
-          .map((entry) => parseInt(entry.target.id, 10));
+          .map((entry) => parseInt(entry.target.getAttribute("data-id"), 10));
         setVisibleProjects(visibleIds);
       },
       { root: null, rootMargin: "0px", threshold: 0.5 }
@@ -39,11 +39,12 @@ const Projects = () => {
       <div className={styles.projects}>
         {projects.map((project, id) => {
           const isVisible = visibleProjects.includes(id);
-          const projectRef = React.createRef();
+          const projectRef = useRef(null);
           projectRefs.current[id] = projectRef;
 
           return (
-            <div key={id} id={id} ref={projectRef}>
+            <div key={id} data-id={id} ref={projectRef}>
+              {/* Assign the actual element to the ref */}
               <ProjectCard project={project} isVisible={isVisible} />
             </div>
           );
