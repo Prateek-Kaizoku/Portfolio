@@ -1,39 +1,57 @@
-import React from "react";
-import { getImageUrl } from "../../utils";
-import styles from "./ProjectCard.module.css";
+import React, { useEffect, useState, useRef } from "react";
+import projects from "../../data/projects.json";
+import styles from "./Projects.module.css";
+import ProjectCard from "./ProjectCard";
 
-const ProjectCard = ({
-  project: { imageSrc, title, description, skills, demo, sourceUrl },
-  isVisible,
-}) => {
+const Projects = () => {
+  const [visibleProjects, setVisibleProjects] = useState([]);
+  const projectRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleIds = entries
+          .filter((entry) => entry.isIntersecting)
+          .map((entry) => parseInt(entry.target.getAttribute("data-id"), 10));
+        setVisibleProjects(visibleIds);
+      },
+      { root: null, rootMargin: "0px", threshold: 0.5 }
+    );
+
+    projectRefs.current.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
+
+    return () => {
+      projectRefs.current.forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
+    };
+  }, []);
+
   return (
-    <div
-      className={`${styles.container} ${
-        isVisible ? styles.appear : styles.appearOnScroll
-      }`}
-    >
-      <img className={styles.image} src={getImageUrl(imageSrc)} alt={title} />
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.description}>{description}</p>
-      <ul className={styles.skills}>
-        {skills.map((skill, id) => {
+    <section id="projects" className={styles.container}>
+      <h2 className={styles.title}>Projects</h2>
+      <div className={styles.projects}>
+        {projects.map((project, id) => {
+          const isVisible = visibleProjects.includes(id);
+          const projectRef = useRef(null);
+          projectRefs.current[id] = projectRef;
+
           return (
-            <li className={styles.skill} key={id}>
-              {skill}
-            </li>
+            <div key={id} data-id={id} ref={projectRef}>
+              {/* Assign the actual element to the ref */}
+              <ProjectCard project={project} isVisible={isVisible} />
+            </div>
           );
         })}
-      </ul>
-      <div className={styles.links}>
-        <a className={styles.link} href={sourceUrl}>
-          Source
-        </a>
-        <a className={styles.link} href={demo}>
-          Demo
-        </a>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default ProjectCard;
+export default Projects;
