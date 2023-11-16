@@ -1,0 +1,231 @@
+@import "../../vars.css";
+
+
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 49px;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-text);
+    z-index: 1;
+}
+
+.title{
+    font-size: 72px;
+    font-weight: 900;
+    margin-bottom: 33px;
+    font-family: var(--font-roboto);
+    /* background: linear-gradient(90deg, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 180%);
+    --webkit-text-fill-color: transparent; */
+    text-align: center;
+  color: rgba(124, 103, 158, 0.318);
+  background: -webkit-gradient(linear, left top, right top, from(#f1f1f1), to(#e5e5e5),color-stop(0.5, #000000),color-stop(0.5, #052390),color-stop(0.5, #060220));
+  background: -moz-gradient(linear, left top, right top, from(#3c014e), to(#222), color-stop(0.5, #fff));
+  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  -webkit-background-size: 125px 100%;
+  -moz-background-size: 125px 100%;
+  background-size: 125px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  -moz-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #d0c6e489;
+
+
+}
+
+.description{
+    font-size: 30px;
+    font-family: var(--font-roboto);
+    margin-bottom: 52px;
+    background: -webkit-gradient(linear, left top, right top, from(#b9d00a), to(#222), color-stop(0.5, #fff));
+  background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  -webkit-background-size: 125px 100%;
+  -moz-background-size: 125px 100%;
+  background-size: 125px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer-description;
+  -moz-animation-name: shimmer-description;
+  animation-name: shimmer-description;
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #222;
+  position: relative;
+
+}
+
+.contactBtn{
+    text-decoration: none;
+    background-color: var(--color-primary);
+    background: -webkit-gradient(linear, left top, right top, from(#590ad086), to(#222), color-stop(0.5, #000000));
+    color: var(--color-text);
+    border-radius: 100px;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 17px 26px;
+    box-shadow:  0 0 4px 0 rgb(222, 209, 209);
+}
+
+.heroImg{
+    width: 50%;
+    z-index: 1;
+
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+
+
+}
+@keyframes floating {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.topBlur{
+    position: absolute;
+ 
+    width: 50vw;
+    height: 50vw;
+    min-width: 350px;
+    min-height: 350px ;
+    top:-128px;
+    left:10vw;
+    border-radius: 764px;
+    background: 
+    #38097e90;
+   filter: blur(100px);
+    z-index: 0;
+
+}
+.bottomBlur{
+    position: absolute;
+ 
+    width: 70vw;
+    height: 50vw;
+    min-width: 350px;
+    min-height: 250px ;
+    top:246px;
+    right: -25vw;
+    border-radius: 764px;
+    background: rgba(92, 68, 248, 0.419);
+    filter: blur(100px);
+    z-index: 0;
+
+}
+
+
+@media screen and (max-width: 830px) {
+    .container{
+        flex-direction: column-reverse;
+    }
+    .content{
+        align-items: center;
+       
+    }
+}
+
+
+@-moz-keyframes shimmer {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+  @-webkit-keyframes shimmer {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+  @-o-keyframes shimmer {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+  @keyframes shimmer {
+    0%, 100% {
+      background-position: top left;
+    }
+    50% {
+      background-position: top right;
+    }
+  }
+
+  @-moz-keyframes shimmer-description {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.262);
+    }
+    50% {
+      box-shadow: 20px 0 10px rgba(255, 0, 0, 0.793);
+    }
+  }
+  
+  @-webkit-keyframes shimmer-description {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+      box-shadow: 20px 0 10px rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+  @-o-keyframes shimmer-description {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+      box-shadow: 20px 0 10px rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+  @keyframes shimmer-description {
+    0%, 100% {
+      box-shadow: 0 0 10px rgb(50, 1, 104);
+    }
+    50% {
+      box-shadow: 20px 0 10px rgba(254, 254, 254, 0.379);
+    }
+  }
