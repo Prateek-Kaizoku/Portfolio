@@ -4,7 +4,7 @@ import { getImageUrl } from "../utils";
 import FireIcon from "./FireIcon";
 import cat from "./Hero/cat.json";
 import catSlipping from "./catSlipping.json";
-import catSlip from "./catSlip.json";
+import catSlip from "../data/CatSlip.json";
 import Lottie from "lottie-react";
 
 const Navbar = () => {
