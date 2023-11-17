@@ -1,26 +1,26 @@
 [
   {
     "title": "PDFZen - An Annotation and Commenting Tool",
-    "imageSrc": "projects/projectInsgen.png",
+    "imageSrc": "projects/ss.png",
     "description": "This is a project made to learn the latest languages by building an app.",
     "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "demo": "https://prateek-kaizoku.github.io/",
+    "source": "https://github.com/Prateek-Kaizoku/Prateek-Kaizoku.github.io"
   },
   {
     "title": "Jetflix - A Netflix Clone and Movie Recommendation Engine",
-    "imageSrc": "projects/jollyRoger.png",
+    "imageSrc": "projects/jetflix.png",
     "description": "This is a project made to learn the latest languages by building an app.",
     "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "demo": "https://jetflix.web.app/",
+    "source": "https://github.com/Prateek-Kaizoku/jetFlix"
   },
   {
     "title": "Insgen - Node CLI",
-    "imageSrc": "projects/ss.png",
+    "imageSrc": "projects/projectInsgen.png",
     "description": "This is a project made to learn the latest languages by building an app.",
     "skills": ["React", "Express", "Node", "Sass"],
-    "demo": "https://www.example.com",
-    "source": "https://www.linkedin.com/in/contact-prateek"
+    "demo": "https://www.npmjs.com/package/insgen",
+    "source": "https://github.com/Prateek-Kaizoku/TextExtractor"
   }
 ]
