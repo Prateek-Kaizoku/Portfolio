@@ -1,6 +1,8 @@
 import React from "react";
 import { getImageUrl } from "../../utils";
 import styles from "./Hero.module.css";
+import cat from "./cat.json";
+import Lottie from "lottie-react";
 
 const Hero = () => {
   return (

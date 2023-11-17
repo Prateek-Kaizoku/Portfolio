@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { getImageUrl } from "../utils";
 import FireIcon from "./FireIcon";
+import cat from "./Hero/cat.json";
+import catSlipping from "./catSlipping.json";
+import catSlip from "./catSlip.json";
+import Lottie from "lottie-react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,7 +14,8 @@ const Navbar = () => {
       <a className={styles.title} href="/">
         Portfolio
         <span className={styles.titleHover}>
-          <FireIcon />
+          <Lottie animationData={cat} className={styles.catHang} />
+          <Lottie animationData={catSlip} className={styles.catSlip} />
         </span>
       </a>
       <div className={styles.menu}>
