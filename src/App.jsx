@@ -103,7 +103,7 @@ function App() {
         // Applied to the canvas element
 
         // Controls the number of snowflakes that are created (default 150)
-        snowflakeCount={108}
+        snowflakeCount={51}
         style={{
           position: "fixed",
           width: "100%",
