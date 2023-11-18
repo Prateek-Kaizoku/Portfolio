@@ -6,11 +6,8 @@ import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Snowfall from "react-snowfall";
-import snowFlake from "../assets/about/snowFlake.png";
-import onePiece from "../assets/about/onePiece.png";
 
 function App() {
-  const image = [snowFlake, onePiece];
   return (
     <div className={styles.App}>
       <Snowfall
