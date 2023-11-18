@@ -5,4 +5,8 @@ import "./index.css";
 import "@fontsource/roboto";
 import "@fontsource/outfit";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
