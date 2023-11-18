@@ -6,19 +6,25 @@ import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Snowfall from "react-snowfall";
+import snowFlake from "../assets/about/snowFlake.png";
+import onePiece from "../assets/about/onePiece.png";
+
 function App() {
+  const image = [snowFlake, onePiece];
   return (
     <div className={styles.App}>
       <Snowfall
         // Changes the snowflake color
-        color="grey"
+        color="white"
+        wind={[0.5, 2.0]}
         // Applied to the canvas element
 
         // Controls the number of snowflakes that are created (default 150)
-        snowflakeCount={500}
+        snowflakeCount={216}
         style={{
+          position: "fixed",
           width: "100%",
-          height: "500%",
+          height: "100%",
           zIndex: 1,
         }}
       />
