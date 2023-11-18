@@ -4,6 +4,7 @@ import { getImageUrl } from "../../utils";
 import styles from "./Experience.module.css";
 import { useInView } from "react-intersection-observer";
 import history from "../../data/history.json";
+import Snowfall from "react-snowfall";
 const Experience = () => {
   const { ref: mref, inview: isSkillsVisible } = useInView();
   const { ref: skillRef, inview: isHistoryVisible } = useInView();
