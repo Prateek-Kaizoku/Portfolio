@@ -11,8 +11,8 @@ const Hero = () => {
         <h1 className={styles.title}>Hi, I'm Prateek</h1>
         <p className={styles.description}>
           {" "}
-          I'm a FrontEnd Developer with 3.5 years of experience with Reach and
-          NodeJS. React out if you'd like to learn more!{" "}
+          I'm a FrontEnd Developer with 3.5 years of experience with React and
+          NodeJS. Reach out if you'd like to learn more!{" "}
         </p>
         <a href="mailto:PrateekReachMe@gmail.com" className={styles.contactBtn}>
           Contact Me

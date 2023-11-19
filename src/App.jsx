@@ -40,7 +40,7 @@ function App() {
               },
               onHover: {
                 enable: true,
-                mode: "repulse",
+                mode: "bubble",
               },
               resize: true,
             },
@@ -51,6 +51,13 @@ function App() {
               repulse: {
                 distance: 100,
                 duration: 0.4,
+              },
+              bubble: {
+                distance: 400,
+                size: 20,
+                duration: 2,
+                opacity: 8,
+                speed: 3,
               },
             },
           },
