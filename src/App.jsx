@@ -40,7 +40,7 @@ function App() {
               },
               onHover: {
                 enable: true,
-                mode: "bubble",
+                mode: "repulse",
               },
               resize: true,
             },
