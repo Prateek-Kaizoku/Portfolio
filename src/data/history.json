@@ -4,7 +4,7 @@
         "organisation": "Better.com",
         "startDate": "Aug, 2020",
         "endDate": "Dec, 2021",
-        "experiences": ["Worked on Windows 11", "Designed the control panel"],
+        "experiences": ["Transformed web app UI with material design components and custom React libraries.", "Deployed an automated production build process, resulting in 45% reduction in execution time"],
         "imageSrc": "history/better.png"
       },
     {
