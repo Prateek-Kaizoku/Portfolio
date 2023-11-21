@@ -44,12 +44,12 @@
   -webkit-animation-duration: 4s;
   -moz-animation-duration: 4s;
   animation-duration: 4s;
-  -webkit-animation-iteration-count: infinite;
+  /* -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-color: #d0c6e489;
+  background-color: #d0c6e489; */
 
 
 }
@@ -73,13 +73,13 @@
   -webkit-animation-duration: 4s;
   -moz-animation-duration: 4s;
   animation-duration: 4s;
-  -webkit-animation-iteration-count: infinite;
+  /* -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-color: #222;
-  position: relative;
+  position: relative; */
 
 }
 
