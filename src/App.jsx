@@ -12,7 +12,7 @@ import Particles from "react-particles";
 import MatrixBG from "./components/Canvas/MatrixBG";
 
 function App() {
-  const [showSnowfall, setShowSnowfall] = useState(true);
+  const [showSnowfall, setShowSnowfall] = useState(false);
   const [showMatrix, setShowMatrix] = useState(false);
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
