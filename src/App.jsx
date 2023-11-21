@@ -7,10 +7,13 @@ import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Snowfall from "react-snowfall";
 import { loadSlim } from "tsparticles-slim";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import Particles from "react-particles";
+import MatrixBG from "./components/Canvas/MatrixBG";
 
 function App() {
+  const [showSnowfall, setShowSnowfall] = useState(true);
+  const [showMatrix, setShowMatrix] = useState(false);
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -24,8 +27,28 @@ function App() {
     console.log(container);
   }, []);
 
+  const toggleSnowfall = () => {
+    console.log("toggleSnowfall");
+    setShowSnowfall(!showSnowfall);
+  };
+  const toggleMatrix = () => {
+    console.log("toggleSnowfall");
+    setShowMatrix(!showMatrix);
+  };
+
   return (
     <div className={styles.App}>
+      {showMatrix && (
+        <div
+          style={{
+            position: "fixed",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <MatrixBG />
+        </div>
+      )}
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -103,22 +126,21 @@ function App() {
         }}
       />
 
-      <Snowfall
-        // Changes the snowflake color
-        color="white"
-        wind={[0.5, 2.0]}
-        // Applied to the canvas element
+      {showSnowfall && (
+        <Snowfall
+          color="white"
+          wind={[0.5, 2.0]}
+          snowflakeCount={51}
+          style={{
+            position: "fixed",
+            width: "100%",
+            height: "100%",
+            zIndex: 1,
+          }}
+        />
+      )}
 
-        // Controls the number of snowflakes that are created (default 150)
-        snowflakeCount={51}
-        style={{
-          position: "fixed",
-          width: "100%",
-          height: "100%",
-          zIndex: 1,
-        }}
-      />
-      <Navbar />
+      <Navbar onToggleSnowfall={toggleSnowfall} onToggleMatrix={toggleMatrix} />
       <Hero />
       <About />
       <Experience />
